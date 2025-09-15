@@ -1,36 +1,43 @@
 import { useState } from 'react'
 import skillsUSALogo from './assets/skillsUSALogo.png'
 import annaISDLogo from './assets/annaISDLogo.png'
+import sept9th from './minutes/09-03-2025.pdf'
 import './App.css'
 
 function App() {
+  const [showPdf, setShowPdf] = useState(false);
+
   return (
     <>
       <div className="announcement-banner">
         <h2>Announcement</h2>
         <p>VOTE FOR OUR LEADERSHIP! <a href='https://forms.gle/nk2wZXGrcHVfZAQ67'>Google Form</a></p>
       </div>
-      <div>
-        <a href="https://www.skillsusa.org/" target="_blank">
-          <img
-            src={skillsUSALogo}
-            className="logo"
-            alt="SkillsUSA logo featuring a stylized flag design representing teamwork and leadership in a professional, welcoming tone"
-          />
-        </a>
-        <a href="https://ahs.annaisd.org/" target="_blank">
-          <img
-            src={annaISDLogo}
-            className="logo"
-            alt="Anna Independent School District logo with bold text Anna ISD, conveying a sense of community and academic pride"
-          />
-        </a>
+      <div className='titlecard'>
+        <div className='logos'>
+          <a href="https://www.skillsusa.org/" target="_blank">
+            <img
+              src={skillsUSALogo}
+              className="logo"
+              alt="SkillsUSA logo featuring a stylized flag design representing teamwork and leadership in a professional, welcoming tone"
+            />
+          </a>
+          <a href="https://ahs.annaisd.org/" target="_blank">
+            <img
+              src={annaISDLogo}
+              className="logo"
+              alt="Anna Independent School District logo with bold text Anna ISD, conveying a sense of community and academic pride"
+            />
+          </a>
+        </div>
+        <h1>SkillsUSA + AnnaISD</h1>
+        <br />
       </div>
-      <h1>SkillsUSA + AnnaISD</h1>
       <div className="card">
         <h2>About the Team</h2>
         <p>SkillsUSA is the #1 workforce development organization for students. We empower students to become skilled professionals, career-ready leaders and responsible community members.</p>
-        <br></br>
+      </div>
+      <div className="card">
         <h2>Our Sponsors</h2>
         <h3>Club Sponsor</h3>
         <p>Erik Plossl</p>
@@ -40,14 +47,16 @@ function App() {
         <p>Bill Borowski & Kaitlyn Cook</p>
         <h3>Photography</h3>
         <p>Jennilee Torres</p>
-        <br></br>
+      </div>
+      <div className="card">
         <h2>Meet the Leadership</h2>
         <p>President - Thomas McKinley</p>
         <p>Secretary - </p>
         <p>Treasurer - </p>
         <p>Parliamentarian - </p>
         <p>Historian - <a href='https://christianlarsen.kairosllc.org'>Christian Larsen</a></p>
-        <br></br>
+      </div>
+      <div className="card">
         <h2>Our Next Meeting</h2>
         <p>Oct. 8th (tentative)</p>
         <p>4:45 PM - 5:30 PM</p>
@@ -64,9 +73,64 @@ function App() {
             <img src="https://cdn.addevent.com/libs/imgs/icon-emd-share-outlook-t1.png" alt="Outlook calendar icon for adding event" width="35" style={{width:"35px",display:"inline"}} />
           </a>
         </p>
-        <br></br>
+      </div>
+      <div className='card'>
+        <h2>Previous Meeting Minutes</h2>
+        <button onClick={() => setShowPdf(true)}>
+          <p>9/3/25</p>
+        </button>
+      </div>
+      {showPdf && (
+        <div
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100vw",
+            height: "100vh",
+            background: "rgba(0,0,0,0.7)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            zIndex: 1000
+          }}
+          onClick={() => setShowPdf(false)}
+        >
+          <div
+            style={{
+              background: "#fff",
+              padding: "20px",
+              borderRadius: "8px",
+              maxWidth: "90vw",
+              maxHeight: "90vh",
+              boxShadow: "0 2px 10px rgba(0,0,0,0.3)",
+              position: "relative"
+            }}
+            onClick={e => e.stopPropagation()}
+          >
+            <button
+              style={{
+                position: "absolute",
+                top: 10,
+                right: 10,
+                background: "#e74c3c",
+                color: "#fff",
+                border: "none",
+                borderRadius: "4px",
+                padding: "5px 10px",
+                cursor: "pointer"
+              }}
+              onClick={() => setShowPdf(false)}
+            >
+              Close
+            </button>
+            <object data={sept9th} type="application/pdf" width="800px" height="600px" style={{maxWidth:"95vw",maxHeight:"95vh"}}></object>
+          </div>
+        </div>
+      )}
+      <div className="card">
         <h2>Questions?</h2>
-        <p><a href="mailto:erik.plossl@annaisd.org">Email Our Representative!</a></p>
+        <p>Email Our Representative! <a href="mailto:erik.plossl@annaisd.org">Erik Plossl</a></p>
       </div>
     </>
   )
