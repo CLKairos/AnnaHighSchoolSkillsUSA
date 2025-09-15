@@ -1,0 +1,75 @@
+import { useState } from 'react'
+import skillsUSALogo from './assets/skillsUSALogo.png'
+import annaISDLogo from './assets/annaISDLogo.png'
+import './App.css'
+
+function App() {
+  return (
+    <>
+      <div className="announcement-banner">
+        <h2>Announcement</h2>
+        <p>VOTE FOR OUR LEADERSHIP! <a href='https://forms.gle/nk2wZXGrcHVfZAQ67'>Google Form</a></p>
+      </div>
+      <div>
+        <a href="https://www.skillsusa.org/" target="_blank">
+          <img
+            src={skillsUSALogo}
+            className="logo"
+            alt="SkillsUSA logo featuring a stylized flag design representing teamwork and leadership in a professional, welcoming tone"
+          />
+        </a>
+        <a href="https://ahs.annaisd.org/" target="_blank">
+          <img
+            src={annaISDLogo}
+            className="logo"
+            alt="Anna Independent School District logo with bold text Anna ISD, conveying a sense of community and academic pride"
+          />
+        </a>
+      </div>
+      <h1>SkillsUSA + AnnaISD</h1>
+      <div className="card">
+        <h2>About the Team</h2>
+        <p>SkillsUSA is the #1 workforce development organization for students. We empower students to become skilled professionals, career-ready leaders and responsible community members.</p>
+        <br></br>
+        <h2>Our Sponsors</h2>
+        <h3>Club Sponsor</h3>
+        <p>Erik Plossl</p>
+        <h3>Comp Sci & Comp Tech</h3>
+        <p>Erik Plossl</p>
+        <h3>Health Sciences</h3>
+        <p>Bill Borowski & Kaitlyn Cook</p>
+        <h3>Photography</h3>
+        <p>Jennilee Torres</p>
+        <br></br>
+        <h2>Meet the Leadership</h2>
+        <p>President - Thomas McKinley</p>
+        <p>Secretary - </p>
+        <p>Treasurer - </p>
+        <p>Parliamentarian - </p>
+        <p>Historian - <a href='https://christianlarsen.kairosllc.org'>Christian Larsen</a></p>
+        <br></br>
+        <h2>Our Next Meeting</h2>
+        <p>Oct. 8th (tentative)</p>
+        <p>4:45 PM - 5:30 PM</p>
+        <p>AHS Library</p>
+        <sub>Add to Calendar</sub>
+        <p style={{margin:"0px 0px 10px 0px",textAlign:"center",fontSize:"0px"}}>
+          <a href="https://www.addevent.com/event/At26720979+apple" title="Apple" target="_blank" style={{display:"inline"}}>
+            <img src="https://cdn.addevent.com/libs/imgs/icon-emd-share-apple-t1.png" alt="Apple calendar icon for adding event" width="35" style={{width:"35px",display:"inline"}} />
+          </a>
+          <a href="https://www.addevent.com/event/At26720979+google" title="Google" target="_blank" style={{display:"inline"}}>
+            <img src="https://cdn.addevent.com/libs/imgs/icon-emd-share-google-t1.png" alt="Google calendar icon for adding event" width="35" style={{width:"35px",display:"inline"}} />
+          </a>
+          <a href="https://www.addevent.com/event/At26720979+outlook" title="Outlook" target="_blank" style={{display:"inline"}}>
+            <img src="https://cdn.addevent.com/libs/imgs/icon-emd-share-outlook-t1.png" alt="Outlook calendar icon for adding event" width="35" style={{width:"35px",display:"inline"}} />
+          </a>
+        </p>
+        <br></br>
+        <h2>Questions?</h2>
+        <p><a href="mailto:erik.plossl@annaisd.org">Email Our Representative!</a></p>
+      </div>
+    </>
+  )
+}
+
+export default App
