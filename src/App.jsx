@@ -35,7 +35,7 @@ function App() {
       </div>
       <div className="card">
         <h2>About the Team</h2>
-        <p>SkillsUSA is the #1 workforce development organization for students. We empower students to become skilled professionals, career-ready leaders and responsible community members.</p>
+        <p>SkillsUSA is more than a student organization. It is a movement. We prepare the next generation of leaders by equipping students with hands-on technical skills, professional confidence, and a lifelong commitment to excellence. Through SkillsUSA, students don’t just learn career skills. They build character, teamwork, and leadership. Together, we create a community of motivated, responsible citizens ready to contribute to the workforce and beyond. As the nation’s premier workforce development organization, SkillsUSA bridges the gap between classrooms and careers. We empower students to explore their passions, refine their skills, and step boldly into tomorrow’s workforce with confidence. SkillsUSA develops more than technical ability. It cultivates leaders. Students gain the confidence, collaboration skills, and real-world experience needed to excel in both their chosen careers and their communities.</p>
       </div>
       <div className="card">
         <h2>Our Sponsors</h2>
