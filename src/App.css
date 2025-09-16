@@ -1,55 +1,161 @@
-/*https://coolors.co/320a28-511730-8e443d-cb9173-e0d68a <-- COLOR PALETTE */
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: #f5f3ff; /* light purple-ish white */
+  color: #2e1a47; /* dark purple text */
+  line-height: 1.6;
+}
+
+/* Announcement Banner */
+.announcement-banner {
+  background: #6a0dad; /* rich purple */
+  color: #fff;
   text-align: center;
+  padding: 12px 0;
+  font-weight: 600;
+}
+
+.announcement-banner a {
+  color: #ffe6ff;
+  text-decoration: underline;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.header .logos {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+  height: 70px;
+  transition: transform 0.3s;
 }
+
 .logo:hover {
-  filter: drop-shadow(0 0 2em #8E443D);
+  transform: scale(1.1);
 }
 
-.announcement-banner {
-  background-color: #d98ae0;
-  color: #FFF;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-radius: 8px;
+/* Main Content */
+.main-content {
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
 }
 
+/* Cards */
 .card {
-  padding: 2em;
-  background-color: #5e007a;
-  border-radius: 8px;
-  margin-bottom: 1em;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.card button {
-  background-color:rgb(130, 0, 170)a;
-  color: white;
-  width: 50%;
-}
-.card button:hover {
-  background-color: rgb(193, 115, 203);
-  color: black;
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
-.logos {
+.card h2 {
+  margin-bottom: 1rem;
+  color: #6a0dad;
+}
+
+/* PDF Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow: hidden;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: #6a0dad;
+  color: #fff;
+  border-radius: 6px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.pdf-object {
+  width: 800px;
+  height: 600px;
+  max-width: 95vw;
+  max-height: 95vh;
+}
+
+/* Calendar Links */
+.calendar-links {
   display: flex;
   justify-content: center;
-  gap: 2em;
-  margin-bottom: 1em;
+  gap: 15px;
+  margin-top: 10px;
 }
 
-.titlecard {
-  margin-bottom: 1em;
-  background-color: #a000d1;
+.calendar-links img {
+  width: 40px;
+  transition: transform 0.3s;
+}
+
+.calendar-links img:hover {
+  transform: scale(1.1);
+}
+
+/* PDF Button */
+.pdf-btn {
+  background: #6a0dad;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
   border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.pdf-btn:hover {
+  background: #520d8a;
+}
+
+/* Links */
+a {
+  color: #6a0dad;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #520d8a;
 }
