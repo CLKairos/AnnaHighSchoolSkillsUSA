@@ -1,7 +1,7 @@
 import { useState } from "react";
 import skillsUSALogo from "./assets/skillsUSALogo.png";
 import annaISDLogo from "./assets/annaISDLogo.png";
-import sept9th from "./minutes/09-03-2025.pdf";
+import sept3rd from "./minutes/09-03-2025.pdf";
 import "./App.css";
 
 /* -------------------- Components -------------------- */
@@ -119,7 +119,7 @@ function App() {
         </Card>
       </main>
 
-      {showPdf && <PdfModal file={sept9th} onClose={() => setShowPdf(false)} />}
+      {showPdf && <PdfModal file={sept3rd} onClose={() => setShowPdf(false)} />}
     </>
   );
 }
