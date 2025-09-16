@@ -76,9 +76,9 @@ function App() {
         <Card title="Meet the Leadership">
           <ul>
             <li><strong>President</strong> - Thomas McKinley</li>
-            <li><strong>Secretary</strong> - </li>
-            <li><strong>Treasurer</strong> - </li>
-            <li><strong>Parliamentarian</strong> - </li>
+            <li><strong>Secretary</strong> - Vacant</li>
+            <li><strong>Treasurer</strong> - Opeyemi Opakunle</li>
+            <li><strong>Parliamentarian</strong> - Vacant</li>
             <li>
               <strong>Historian</strong>  - <a href="https://christianlarsen.kairosllc.org">Christian Larsen</a>
             </li>
@@ -114,7 +114,7 @@ function App() {
         <Card title="Questions?">
           <p>
             Email Our Representative:{" "}
-            <a href="mailto:erik.plossl@annaisd.org">Erik Plossl</a>
+            <a href="mailto:erik.plossl@annaisd.org">Erik Plossl @ erik.plossl@annaisd.org</a>
           </p>
         </Card>
       </main>
