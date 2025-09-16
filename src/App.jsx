@@ -117,6 +117,14 @@ function App() {
             <a href="mailto:erik.plossl@annaisd.org">Erik Plossl @ erik.plossl@annaisd.org</a>
           </p>
         </Card>
+        <Card title="Follow Us">
+          <p>
+            Instagram:{" "}
+            <a href="https://www.instagram.com/annahighschoolskillsusa/" target="_blank">
+              @AHSSkillsUSA
+            </a>
+          </p>
+        </Card>
       </main>
 
       {showPdf && <PdfModal file={sept3rd} onClose={() => setShowPdf(false)} />}
