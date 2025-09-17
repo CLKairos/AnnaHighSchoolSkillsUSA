@@ -68,7 +68,7 @@ function App() {
           <ul>
             <li><strong>Club Sponsor</strong> - Erik Plossl</li>
             <li><strong>Comp Sci & Comp Tech</strong> - Erik Plossl</li>
-            <li><strong>Health Sciences</strong> - Bill Borowski & Kaitlyn Cook</li>
+            <li><strong><strike>Health Sciences</strike></strong> - Now the HOSA program</li>
             <li><strong>Photography</strong> - Jennilee Torres</li>
           </ul>
         </Card>
@@ -112,17 +112,22 @@ function App() {
         </Card>
 
         <Card title="Questions?">
-          <p>
-            Email Our Representative:{" "}
-            <a href="mailto:erik.plossl@annaisd.org">Erik Plossl @ erik.plossl@annaisd.org</a>
-          </p>
+          <p>Email Our Sponsor: <a href="mailto:erik.plossl@annaisd.org">Erik Plossl</a> @ erik.plossl@annaisd.org</p>
         </Card>
         <Card title="Follow Us">
           <p>
-            Instagram:{" "}
-            <a href="https://www.instagram.com/annahighschoolskillsusa/" target="_blank">
-              @AHSSkillsUSA
-            </a>
+            <div className="calendar-links">
+            <a
+                href={`https://www.instagram.com/annahighschoolskillsusa/`}
+                target="_blank"
+              >
+                <img
+                  src={`https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png`}
+                  style={{ height: "35px", width: "35px", borderRadius: "8px" }}
+                  alt={`Instagram logo`}
+                />
+              </a>
+          </div>
           </p>
         </Card>
       </main>
