@@ -46,9 +46,9 @@ const PdfModal = ({ file, onClose }) => (
       <object data={file} type="application/pdf" className="pdf-object" />
     </div>
   </div>
-);
+);  
 
-/* -------------------- Main App -------------------- */
+
 function App() {
   const [showPdf, setShowPdf] = useState(false);
 
@@ -80,7 +80,7 @@ function App() {
             <li><strong>Treasurer</strong> - Opeyemi Opakunle</li>
             <li><strong>Parliamentarian</strong> - Vacant</li>
             <li>
-              <strong>Historian</strong>  - <a href="https://christianlarsen.kairosllc.org">Christian Larsen</a>
+              <strong>Historian</strong> - <a href="https://christianlarsen.kairosllc.org">Christian Larsen</a>
             </li>
           </ul>
         </Card>
@@ -91,15 +91,8 @@ function App() {
           <p>AHS Library</p>
           <div className="calendar-links">
             {["apple", "google", "outlook"].map((platform) => (
-              <a
-                key={platform}
-                href={`https://www.addevent.com/event/At26720979+${platform}`}
-                target="_blank"
-              >
-                <img
-                  src={`https://cdn.addevent.com/libs/imgs/icon-emd-share-${platform}-t1.png`}
-                  alt={`${platform} calendar`}
-                />
+              <a key={platform} href={`https://www.addevent.com/event/At26720979+${platform}`} target="_blank">
+                <img src={`https://cdn.addevent.com/libs/imgs/icon-emd-share-${platform}-t1.png`} alt={`${platform} calendar`}/>
               </a>
             ))}
           </div>
@@ -114,20 +107,14 @@ function App() {
         <Card title="Questions?">
           <p>Email Our Sponsor: <a href="mailto:erik.plossl@annaisd.org">Erik Plossl</a> @ erik.plossl@annaisd.org</p>
         </Card>
+
         <Card title="Follow Us">
           <p>
             <div className="calendar-links">
-            <a
-                href={`https://www.instagram.com/annahighschoolskillsusa/`}
-                target="_blank"
-              >
-                <img
-                  src={`https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png`}
-                  style={{ height: "35px", width: "35px", borderRadius: "8px" }}
-                  alt={`Instagram logo`}
-                />
+              <a href={`https://www.instagram.com/annahighschoolskillsusa/`} target="_blank">
+                <img src={`https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png`} style={{ height: "35px", width: "35px", borderRadius: "8px" }} alt={`Instagram logo`}/>
               </a>
-          </div>
+            </div>
           </p>
         </Card>
       </main>
