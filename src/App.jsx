@@ -8,8 +8,8 @@ import "./App.css";
 const AnnouncementBanner = () => (
   <div className="announcement-banner">
     <p>
-      <strong>Vote for our Leadership!</strong>{" "}
-      <a href="https://forms.gle/nk2wZXGrcHVfZAQ67" target="_blank">
+      <strong>Go Follow Our Instagram!</strong>{" "}
+      <a href="https://www.instagram.com/annahighschoolskillsusa/" target="_blank">
         Click Here
       </a>
     </p>
