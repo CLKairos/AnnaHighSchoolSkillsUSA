@@ -53,11 +53,10 @@ const PdfModal = ({ file, onClose }) => (
 );  
 
 
+//
 function App() {
   const [showPdf, setShowPdf] = useState(false);
   const [pdfFile, setPdfFile] = useState(null);
-
-  {/* actual HTML code */}
   return (
     <>
       <AnnouncementBanner />
