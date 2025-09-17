@@ -4,11 +4,13 @@ import annaISDLogo from "./assets/annaISDLogo.png";
 import sept3rd from "./minutes/09-03-2025.pdf";
 import "./App.css";
 
+//COMPONENTS!!
+
 const AnnouncementBanner = () => (
   <div className="announcement-banner">
-    <p>
+    <p>{/* call to action */}
       <strong>Go Follow Our Instagram!</strong>{" "}
-      <a href="https://www.instagram.com/annahighschoolskillsusa/" target="_blank">
+      <a href="https://www.instagram.com/annahighschoolskillsusa/" target="_blank"> {/* link to instagram */}
         Click Here
       </a>
     </p>
@@ -17,11 +19,12 @@ const AnnouncementBanner = () => (
 
 const Header = () => (
   <header className="header">
+    {/* Lowkey I want to get a picture of the team and put it as a background for this section, kinda like how the annaisd site is */}
     <div className="logos">
-      <a href="https://www.skillsusa.org/" target="_blank">
+      <a href="https://www.skillsusa.org/" target="_blank"> {/* link to skillsusa site */}
         <img src={skillsUSALogo} alt="SkillsUSA Logo" className="logo" />
       </a>
-      <a href="https://ahs.annaisd.org/" target="_blank">
+      <a href="https://ahs.annaisd.org/" target="_blank"> {/* link to annaisd site */}
         <img src={annaISDLogo} alt="Anna ISD Logo" className="logo" />
       </a>
     </div>
@@ -36,11 +39,13 @@ const Card = ({ title, children }) => (
   </div>
 );
 
+
+{/* I will admit that this wasn't my code but I did modify it a bit */}
 const PdfModal = ({ file, onClose }) => (
   <div className="modal-overlay" onClick={onClose}>
     <div className="modal-content" onClick={(e) => e.stopPropagation()}>
       <button className="close-btn" onClick={onClose}>
-        ✕
+        X
       </button>
       <object data={file} type="application/pdf" className="pdf-object" />
     </div>
@@ -50,7 +55,9 @@ const PdfModal = ({ file, onClose }) => (
 
 function App() {
   const [showPdf, setShowPdf] = useState(false);
+  const [pdfFile, setPdfFile] = useState(null);
 
+  {/* actual HTML code */}
   return (
     <>
       <AnnouncementBanner />
@@ -58,7 +65,7 @@ function App() {
 
       <main className="main-content">
         <Card title="About the Team">
-          <p>
+          <p> {/* yea no I did NOT write all that, I'm good at programming not copywriting. */}
             SkillsUSA is more than a student organization. It is a movement. We prepare the next generation of leaders by equipping students with hands-on technical skills, professional confidence, and a lifelong commitment to excellence. Through SkillsUSA, students don’t just learn career skills. They build character, teamwork, and leadership. Together, we create a community of motivated, responsible citizens ready to contribute to the workforce and beyond. As the nation’s premier workforce development organization, SkillsUSA bridges the gap between classrooms and careers. We empower students to explore their passions, refine their skills, and step boldly into tomorrow’s workforce with confidence. SkillsUSA develops more than technical ability. It cultivates leaders. Students gain the confidence, collaboration skills, and real-world experience needed to excel in both their chosen careers and their communities.
           </p>
         </Card>
@@ -67,7 +74,7 @@ function App() {
           <ul>
             <li><strong>Club Sponsor</strong> - Erik Plossl</li>
             <li><strong>Comp Sci & Comp Tech</strong> - Erik Plossl</li>
-            <li><strong><strike>Health Sciences</strike></strong> - Now the HOSA program</li>
+            <li><strong><strike>Health Sciences</strike></strong> - Now the HOSA program</li> {/* RIP */}
             <li><strong>Photography</strong> - Jennilee Torres</li>
           </ul>
         </Card>
@@ -78,17 +85,18 @@ function App() {
             <li><strong>Secretary</strong> - Vacant</li>
             <li><strong>Treasurer</strong> - Opeyemi Opakunle</li>
             <li><strong>Parliamentarian</strong> - Vacant</li>
-            <li>
-              <strong>Historian</strong> - <a href="https://christianlarsen.kairosllc.org">Christian Larsen</a>
-            </li>
+            <li><strong>Historian</strong> - <a href="https://christianlarsen.kairosllc.org">Christian Larsen</a></li> {/* HEY THATS ME! */}
           </ul>
         </Card>
 
+        {/* I want to make this a bit more dynamic later, but for now this is fine.
+        ALSO im not 100% sure that this is gonna be the date we meet, might be the week after. */}
         <Card title="Next Meeting">
           <p>Oct. 8th (tentative)</p>
           <p>4:45 PM - 5:30 PM</p>
           <p>AHS Library</p>
           <div className="calendar-links">
+            {/* improved with AI, but still my code */}
             {["apple", "google", "outlook"].map((platform) => (
               <a key={platform} href={`https://www.addevent.com/event/At26720979+${platform}`} target="_blank">
                 <img src={`https://cdn.addevent.com/libs/imgs/icon-emd-share-${platform}-t1.png`} alt={`${platform} calendar`}/>
@@ -97,10 +105,16 @@ function App() {
           </div>
         </Card>
 
+        {/* this used to not be scaleable AT ALL, but now it is! */}
         <Card title="Previous Meeting Minutes">
-          <button className="pdf-btn" onClick={() => setShowPdf(true)}>
+          <button className="pdf-btn" onClick={() => { setPdfFile(sept3rd); setShowPdf(true); }}>
             9/3/25
           </button>
+          {/* 
+            <button className="pdf-btn" onClick={() => { setPdfFile(filename); setShowPdf(true); }}>
+             Date Here
+            </button>
+          */}
         </Card>
 
         <Card title="Questions?">
@@ -111,14 +125,14 @@ function App() {
           <p>
             <div className="calendar-links">
               <a href={`https://www.instagram.com/annahighschoolskillsusa/`} target="_blank">
-                <img src={`https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png`} style={{ height: "35px", width: "35px", borderRadius: "8px" }} alt={`Instagram logo`}/>
+                <img src={`https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png`} style={{ height: "35px", width: "35px"}} alt={`Instagram logo`}/>
               </a>
             </div>
           </p>
         </Card>
       </main>
 
-      {showPdf && <PdfModal file={sept3rd} onClose={() => setShowPdf(false)} />}
+      {showPdf && <PdfModal file={pdfFile} onClose={() => setShowPdf(false)} />}
     </>
   );
 }
