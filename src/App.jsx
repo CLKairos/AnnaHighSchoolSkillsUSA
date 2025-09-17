@@ -4,7 +4,6 @@ import annaISDLogo from "./assets/annaISDLogo.png";
 import sept3rd from "./minutes/09-03-2025.pdf";
 import "./App.css";
 
-/* -------------------- Components -------------------- */
 const AnnouncementBanner = () => (
   <div className="announcement-banner">
     <p>
