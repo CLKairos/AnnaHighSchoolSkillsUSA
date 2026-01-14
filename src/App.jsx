@@ -91,13 +91,13 @@ function App() {
         {/* I want to make this a bit more dynamic later, but for now this is fine.
         ALSO im not 100% sure that this is gonna be the date we meet, might be the week after. */}
         <Card title="Next Meeting">
-          <p>Oct. 8th (tentative)</p>
+          <p>Jan 14th</p>
           <p>4:45 PM - 5:30 PM</p>
           <p>AHS Library</p>
           <div className="calendar-links">
             {/* improved with AI, but still my code */}
             {["apple", "google", "outlook"].map((platform) => (
-              <a key={platform} href={`https://www.addevent.com/event/At26720979+${platform}`} target="_blank">
+              <a key={platform} href={`https://www.addevent.com/event/7pdmzqtdvv9g+${platform}`} target="_blank">
                 <img src={`https://cdn.addevent.com/libs/imgs/icon-emd-share-${platform}-t1.png`} alt={`${platform} calendar`}/>
               </a>
             ))}
