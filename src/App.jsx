@@ -28,7 +28,7 @@ const Header = () => (
         <img src={annaISDLogo} alt="Anna ISD Logo" className="logo" />
       </a>
     </div>
-    <h1>SkillsUSA + AnnaISD</h1>
+    <h1>SkillsUSA @ AnnaISD</h1>
   </header>
 );
 
@@ -73,7 +73,6 @@ function App() {
           <ul>
             <li><strong>Club Sponsor</strong> - Erik Plossl</li>
             <li><strong>Comp Sci & Comp Tech</strong> - Erik Plossl</li>
-            <li><strong><strike>Health Sciences</strike></strong> - Now the HOSA program</li> {/* RIP */}
             <li><strong>Photography</strong> - Jennilee Torres</li>
           </ul>
         </Card>
@@ -84,15 +83,14 @@ function App() {
             <li><strong>Secretary</strong> - Vacant</li>
             <li><strong>Treasurer</strong> - Opeyemi Opakunle</li>
             <li><strong>Parliamentarian</strong> - Vacant</li>
-            <li><strong>Historian</strong> - <a href="https://christianlarsen.kairosllc.org">Christian Larsen</a></li> {/* HEY THATS ME! */}
+            <li><strong>Historian</strong> - Christian Larsen</li> {/* HEY THATS ME! */}
           </ul>
         </Card>
 
-        {/* I want to make this a bit more dynamic later, but for now this is fine.
-        ALSO im not 100% sure that this is gonna be the date we meet, might be the week after. */}
+        {/* I want to make this a bit more dynamic later, but for now this is fine*/}
         <Card title="Next Meeting">
-          <p>Jan 14th</p>
-          <p>4:45 PM - 5:30 PM</p>
+          <p>Feb 4th</p>
+          <p>4:40 PM - 5:20 PM</p>
           <p>AHS Library</p>
           <div className="calendar-links">
             {/* improved with AI, but still my code */}
@@ -125,7 +123,7 @@ function App() {
             <div className="calendar-links">
               <a href={`https://www.instagram.com/annahighschoolskillsusa/`} target="_blank">
                 <img src={`https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png`} style={{ height: "35px", width: "35px"}} alt={`Instagram logo`}/>
-              </a>
+              </a>  
             </div>
           </p>
         </Card>
